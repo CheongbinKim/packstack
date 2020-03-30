@@ -47,3 +47,10 @@ neutron net-create private_network
 neutron subnet-create --name private_subnet private_network 192.168.100.0/24
 
 neutron router-interface-add router1 private_subnet
+
+# create image
+
+wget cloud.centos.org/centos/7/images/CentOS-7-x86_64-GenericCloud-1907.qcow2
+
+glance image-create --container-format=bare --disk-format=qcow2 --name=CentOS7-1907 < CentOS-7-x86_64-GenericCloud-1907.qcow2
+
