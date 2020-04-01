@@ -22,25 +22,6 @@
 ...
 ## Installation Packstack (train)
 
-### allinone
-> packstack --debug --allinone --default-password admin        \
-
->               --os-neutron-ovs-bridge-interfaces=br-ex:eth0   \
-
->                --os-neutron-ml2-tenant-network-types=vxlan     \
-
->                --os-neutron-ml2-mechanism-drivers=openvswitch  \
-
->                --os-neutron-ml2-type-drivers=vxlan,flat        \
-
->                --os-neutron-l2-agent=openvswitch               \
-
->                --provision-demo-floatrange=10.254.1.0/24         \
-
->                --provision-demo-allocation-pools '["start=10.254.1.140,end=10.254.1.150"]' \
-
->                --os-heat-install=y --os-heat-cfn-install=y
-
 > yum install centos-release-openstack-train
 
 > yum install openstack-packstack
