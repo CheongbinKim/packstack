@@ -23,7 +23,7 @@
 ## Installation Packstack (train)
 
 ### allinone
-packstack --debug --allinone --default-password pw        \
+packstack --debug --allinone --default-password admin        \
                --os-neutron-ovs-bridge-interfaces=br-ex:eth0   \
                --os-neutron-ml2-tenant-network-types=vxlan     \
                --os-neutron-ml2-mechanism-drivers=openvswitch  \
