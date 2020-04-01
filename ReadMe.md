@@ -58,3 +58,28 @@
 > glance image-create --container-format=bare --disk-format=qcow2 --name=CentOS7-1907 < CentOS-7-x86_64-GenericCloud-1907.qcow2
 
 ## Add Storage (cinder, lvm) 
+
+##  cinder-backup is down
+/var/log/cinder/backup.log
+> ERROR cinder.service [-] Manager for service cinder-backup kstack is reporting problems, not sending heartbeat. Service will appear "down".
+
+/var/log/cinder/volume.log
+ ERROR oslo.messaging._drivers.impl_rabbit [req-86a7a132-f669-4132-a25b-90a4b3d4aafb - - - - -] Connection failed: [Errno 111] ECONNREFUSED (retrying in 32.0 seconds): error: [Errno 111] ECONNREFUSED
+ 
+
+### rabbitmq add user
+
+> rabbitmqctl list_users
+
+> rabbitmqctl add_user openstack admin
+
+> rabbitmqctl set_permissions openstack ".*" ".*" ".*"
+
+> rabbitmqctl list_permissions
+
+> transport_url=rabbit://guest:guest@10.254.1.198:5672/
+to
+> transport_url=rabbit://openstack:admin@10.254.1.198:5672/
+
+> service openstack-cinder-backup restart
+
