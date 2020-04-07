@@ -59,6 +59,8 @@
 
 ## Add Storage (cinder, lvm) 
 
+Done
+===========================================================================================================
 ##  cinder-backup is down
 /var/log/cinder/backup.log
 > ERROR cinder.service [-] Manager for service cinder-backup kstack is reporting problems, not sending heartbeat. Service will appear "down".
