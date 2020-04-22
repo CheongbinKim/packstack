@@ -55,6 +55,8 @@
 ## Create image
 > wget cloud.centos.org/centos/7/images/CentOS-7-x86_64-GenericCloud-1907.qcow2
 
+> wget http://download.cirros-cloud.net/0.5.1/cirros-0.5.1-x86_64-disk.img
+
 > glance image-create --container-format=bare --disk-format=qcow2 --name=CentOS7-1907 < CentOS-7-x86_64-GenericCloud-1907.qcow2
 
 ## Add Storage (cinder, lvm) 
